@@ -38,7 +38,7 @@ const requestPermissions = async (
   } else if (Platform.OS === 'android') {
     const cameraPermissionResult = await PermissionsAndroid.request(
       PermissionsAndroid.PERMISSIONS.CAMERA,
-      androidCameraPermissionOptions,
+//       androidCameraPermissionOptions,
     );
     if (typeof cameraPermissionResult === 'boolean') {
       hasCameraPermissions = cameraPermissionResult;
