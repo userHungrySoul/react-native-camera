@@ -53,8 +53,7 @@ const requestPermissions = async (
     } else if (Platform.OS === 'android') {
       if (await CameraManager.checkIfRecordAudioPermissionsAreDefined()) {
         const audioPermissionResult = await PermissionsAndroid.request(
-          PermissionsAndroid.PERMISSIONS.RECORD_AUDIO,
-          androidRecordAudioPermissionOptions,
+          PermissionsAndroid.PERMISSIONS.RECORD_AUDIO
         );
         if (typeof audioPermissionResult === 'boolean') {
           hasRecordAudioPermissions = audioPermissionResult;
